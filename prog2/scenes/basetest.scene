@@ -1,0 +1,16 @@
+#
+# Scene file showing a single sphere
+# Created by M.Shepanski
+#
+    
+SceneParams = [    
+    ('viewpoint',    Vector(300, 200, 1000)),
+    ('ambientlight', 0.2),
+    
+    ('light',        Light(Vector(100, 200, 250),   (255, 255, 255))),
+    ('light',        Light(Vector(500, 200, 250),   (255, 255, 255))),
+    
+    ('object',       Sphere(Vector(300, 200, 100),  100,  color.RED,   kd=0.6, ks=0.6, se=6, kr=0.5)),
+    ('object',       Sphere(Vector(300, 200, 1100), 700,  color.GREEN, kd=0.6, ks=0.6, se=6, kr=0.5))
+]
+

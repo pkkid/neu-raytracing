@@ -1,0 +1,24 @@
+#
+# Fells Second Demo from PPT notes
+# Created by M.Shepanski
+#
+
+TEXTURE_TOP    = texture.CheckerBoardZ(color.RED,      color.YELLOW, 100, (10050, 10050))
+TEXTURE_BOTTOM = texture.CheckerBoardZ(color.ORANGE,   color.BLUE,   100, (10050, 10050))
+TEXTURE_BACK   = texture.CheckerBoard(color.SARATOGA,  color.TEAK,   100, (10050, 10050))
+
+SceneParams = [    
+    ('viewpoint',     Vector(300, 200, 900)),
+    ('ambientlight',  0.2),
+    ('light',         Light( Vector(300, 110, 400), (255, 255, 255))),    
+    
+    ('object',  Plane(Vector(0,  1,  0),  -100,   color.TEAK,     0.6,  0)),  # Top
+    ('object',  Plane(Vector(-1, 0,  0),   450,   color.DESERT,   0.6,  0)),  # Right
+    ('object',  Plane(Vector(0, -1,  0),   300,   color.TEAK,     0.6,  0)),  # Bottom
+    ('object',  Plane(Vector(1,  0,  0),  -150,   color.SARATOGA, 0.6,  0)),  # Left
+    ('object',  Plane(Vector(0,  0,  1),     0,   color.TEAK,     0.6,  0)),  # Back
+    ('object',  Plane(Vector(0,  0, -1),   500,   color.THUNDER,  0.6,  0)),  # Front
+    
+    ('object',  Sphere(Vector(250, 250, 350), 50, color.BLACK, kd=0.6, ks=0.6, se=6, kr=0.5, kt=0.6, ni=1.0)),
+    ('object',  Sphere(Vector(350, 250, 350), 50, color.BLACK, kd=0.6, ks=0.6, se=6, kr=0.5, kt=0.6, ni=1.0))
+]

@@ -1,0 +1,16 @@
+#
+# Fells Second Demo from PPT notes
+# Created by M.Shepanski
+#
+
+
+TEXTURE_BACK   = texture.CheckerBoard(color.SARATOGA,  color.TEAK,    25, (10050, 10050))
+
+SceneParams = [
+    ('ambientlight',  0.5),
+    ('viewpoint',     Vector(300, 200, 1000)),
+    ('light',         Light(Vector(0, 10, 900), (255, 255, 255))),  
+    
+    ('object',   Plane(Vector(0,  0,  1),     100, TEXTURE_BACK, 0.6,  0)),     # Back
+    ('object',  Sphere(Vector(300, 200, 100), 100, color.BLACK,  kd=0.4, ks=0.2, se=6, kr=0.1, kt=0.6, ni=1.55)),
+]

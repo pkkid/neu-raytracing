@@ -1,0 +1,16 @@
+#
+# Fells Demo from PPT notes
+# Created by M.Shepanski
+#
+
+SceneParams = [    
+    ('viewpoint',     Vector(300, 200, 1000)),
+    ('ambientlight',  0.4),
+    ('light',         Light(Vector(800, 600, 800), (255, 255, 255))),
+    
+    ('object',        Sphere(Vector(150, 100, 100), 50, (128, 0, 128), kd=0.8, ks=0.6, se=6)),
+    ('object',        Sphere(Vector(200, 200, 300), 50, (128, 128, 0), kd=0.8, ks=0.6, se=6)),
+    ('object',        Sphere(Vector(400, 220, 150), 50, (0, 128, 128), kd=0.8, ks=0.6, se=6)),
+    ('object',        Sphere(Vector(300, 300, 400), 50, (64, 64, 128), kd=0.8, ks=0.6, se=6)),
+]
+

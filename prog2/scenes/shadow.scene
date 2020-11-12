@@ -1,0 +1,15 @@
+#
+# Shows a shadow working
+# Created by M.Shepanski
+#
+
+SceneParams = [    
+    ('viewpoint',     Vector(300, 200, 1000)),
+    ('ambientlight',  0.2),
+    ('light',         Light(Vector(500, 200, 400), (255, 255, 255))),
+    ('light',         Light(Vector(0, 0, 0), (255, 255, 255))),
+    
+    ('object',        Sphere(Vector(300, 250, 100), 100, (255, 255, 255),  kd=0.5, ks=0.5, se=30, kr=0.6)),
+    ('object',        Sphere(Vector(400, 200, 230), 50,  (255, 255, 0),    kd=0.5, ks=0.5, se=30))
+]
+

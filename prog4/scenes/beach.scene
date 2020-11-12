@@ -1,0 +1,27 @@
+#
+# Day at the Beach
+# Created by M.Shepanski
+#
+
+WATER  = texture.Perlin('water')
+CLOUDS = texture.Perlin('clouds')
+BEACH  = texture.Perlin('stucco')
+LEAVES = texture.Perlin('leaves')
+SPRUCE = texture.Perlin('spruce')
+SUN    = (255, 240, 240)
+
+SceneParams = [    
+    ('viewpoint',     Vector(300, 200, 900)),
+    ('ambientlight',  0.5),
+    ('light',         Light( Vector(400, 110, 100), SUN)),
+    
+    # Sky, Water, Beach
+    ('object',  Plane(Vector(0,100,0), Vector(0,95,100), Vector(1,100,0), CLOUDS, 0.7, 0)),
+    ('object',  Plane(Vector(0,300,0), Vector(1,300,0),  Vector(0,300,1), WATER,  0.5, 0, kr=0.5)),
+    ('object',  Sphere(Vector(200,800,250), 550, BEACH, kd=0.7, ks=0.6, se=6)),
+    
+    # Tree on the Beach
+    ('object',  Sphere(Vector(230,150,250), 40, LEAVES, 0.7, 0)),
+    ('object',  Triangle(Vector(230,150,250),Vector(240,400,250),Vector(220,400,250), SPRUCE, kd=0.7, ks=0.6, se=6)),
+    ('object',  Triangle(Vector(230,150,250),Vector(220,400,250),Vector(240,400,250), color.BLACK, kd=0.7, ks=0.6, se=6)),
+]

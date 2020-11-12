@@ -1,0 +1,29 @@
+#
+# Shows Image Map 
+# Created by M.Shepanski
+#
+
+BROWN_CHECKER = texture.CheckerBoard((107,93,69), (58,50,37), 20, (200,200))
+
+SceneParams = [    
+    ('viewpoint',     Vector(300, 200, 900)),
+    ('ambientlight',  0.2),
+    ('light',         Light( Vector(300, 110, 400), (255, 255, 255))),
+    #('light',         Light( Vector(200, 250, 450), (255, 255, 255))),
+    
+    # Walls Build up the Room
+    ('object',  Plane(Vector(0,300,0), Vector(1,300,0), Vector(0,300,1),  color.TEAK,     0.6, 0)),  # Floor
+    ('object',  Plane(Vector(0,100,0), Vector(0,100,1), Vector(1,100,0),  color.TEAK,     0.6, 0)),  # Ceiling
+    ('object',  Plane(Vector(450,0,0), Vector(450,0,1), Vector(450,1,0),  color.DESERT,   0.6, 0)),  # Right
+    ('object',  Plane(Vector(150,0,0), Vector(150,1,0), Vector(150,0,1),  color.SARATOGA, 0.6, 0)),  # Left
+    ('object',  Plane(Vector(0,0,0),   Vector(1,0,0),   Vector(0,1,0),    color.THUNDER,  kd=0.2, ks=0.3, se=6, kr=0.8)),  # Back
+    ('object',  Plane(Vector(0,0,500), Vector(0,1,500), Vector(1,0,500),  color.THUNDER,  0.6, 0)),  # Front
+    
+    # World Map w/ Mirror Behind It
+    ('object',  Sphere    (Vector(250, 250, 350), 50, BROWN_CHECKER, kd=0.6, ks=0.6, se=6, kr=0.1)),
+    ('object',  WavySphere(Vector(350, 250, 350), 50, color.WHITE,   kd=0.6, ks=0.6, se=6, kr=0.5)),
+    
+    # Background Sphere to show Reflection
+    #('object',  Sphere(Vector(300, 170, 100),  120,  color.RED,   kd=0.6, ks=0.6, se=6, kr=0.5)),
+    
+]

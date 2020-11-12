@@ -1,0 +1,19 @@
+#
+# Scene file showing a single sphere
+# Created by M.Shepanski
+#
+    
+CHECKER   = texture.CheckerBoard(color.DESERT, color.TEAK, 50, (400, 400))
+WORLD     = texture.Image("%s/resources/texture-world.jpg" % os.path.dirname(__file__))
+WALLPAPER = texture.Image("%s/resources/texture1.jpg" % os.path.dirname(__file__))
+PAPER     = texture.Image("%s/resources/texture-paper3.jpg" % os.path.dirname(__file__))
+
+SceneParams = [    
+    ('viewpoint',    Vector(300, 200, 1000)),
+    ('ambientlight', 0.2),
+    ('light',        Light(Vector(100, 200, 850),   (255, 255, 255))),
+    
+    #('object',       Plane(Vec(0,0,0), Vec(30,0,-100), Vec(0,10,60), CHECKER, kd=0.6, ks=0.6, se=6, kr=0.5)),
+    ('object',       Ellipse(Vec(300,200,0), 100, 50, 50, color.GREEN, kd=0.6, ks=0.6, se=6, kr=0.0)),
+]
+
